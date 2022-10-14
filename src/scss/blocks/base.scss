@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $mainColor;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: $maxWidthContainer + px;
+  @include adaptiv-value("padding-right", 30, 15, 1);
+  @include adaptiv-value("padding-left", 30, 15, 1);
+  margin: 0 auto;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.title {
+  @include adaptiv-value("font-size", 32, 22, 1);
+  line-height: math.div(37.5px, 32px) * 100%;
+  color: #444444;
+}
+.title2 {
+  font-size: 32px;
+  @include adaptiv-value("font-size", 32, 20, 1);
+  font-weight: 500;
+  line-height: math.div(37.5px, 32px) * 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title3 {
+  @include adaptiv-value("font-size", 18, 14, 1);
+  font-weight: 700;
+  line-height: math.div(26.37px, 18px) * 100%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $mainColor;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include adaptiv-value("font-size", 14, 12, 1);
+  line-height: math.div(14px, 16.4px) * 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  &_red {
+    background-color: $redColor;
+    color: #fff;
+    &:hover {
+      background-color: #d98181;
+      transition: background-color 0.5s ease 0s;
+    }
+  }
+  &_white {
+    background-color: #fff;
+    color: $redColor;
+    border: 2px solid #ffaeae;
+    border-radius: 4px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+    &:hover {
+      background-color: #e0d8d8;
+      transition: background-color 0.5s ease 0s;
+    }
+  }
+}

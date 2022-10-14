@@ -1,0 +1,29 @@
+// font
+$fontFamily: "Roboto";
+$fontSize: 16px;
+$lineHeight: 25px;
+
+// container
+$minWidth: 340px;
+$maxWidth: 1680px;
+$containerOffset: 15px;
+// for @mixin adaptiv-value
+$maxWidthContainer: 1240;
+
+//heights
+$headerHeight: 110;
+$firstScreenHeight: 608;
+$bannerHeight: 528;
+
+// breakpoints
+$xxl: 1252px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+//color
+$mainColor: #626366;
+$redColor: #ff5c5c;
+$pinkColor: #ffaeae;
+$grayColor: #4f4f4f;
