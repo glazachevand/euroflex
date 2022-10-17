@@ -1,4 +1,3 @@
-// убрать в бургер блок с телефоном на маленьких разрешениях экрана
 export function dynamic_adapt() {
   adapt();
   window.addEventListener("resize", function (event) {

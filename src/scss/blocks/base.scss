@@ -2,13 +2,13 @@ body {
   margin: 0;
   font-family: $fontFamily;
   font-size: $fontSize;
+  line-height: $lineHeight;
   color: $mainColor;
 }
 
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
