@@ -27,20 +27,20 @@
   &__title {
     @include adaptiv-value("margin-bottom", 80, 20, 1);
     text-align: left;
-    &._active {
-      animation: blink 0.6s both;
-      @keyframes blink {
-        0%,
-        50%,
-        100% {
-          opacity: 1;
-        }
-        25%,
-        75% {
-          opacity: 0.5;
-        }
-      }
-    }
+    // &.aos-animate {
+    //   animation: blink 0.6s both;
+    //   @keyframes blink {
+    //     0%,
+    //     50%,
+    //     100% {
+    //       opacity: 1;
+    //     }
+    //     25%,
+    //     75% {
+    //       opacity: 0.5;
+    //     }
+    //   }
+    // }
   }
   &__order {
     position: relative;
@@ -63,5 +63,19 @@
         transition: max-height 0.8s ease 0s;
       }
     }
+  }
+}
+[data-aos="banner-title-animate"].aos-animate {
+  animation: blink 0.6s both;
+}
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
   }
 }

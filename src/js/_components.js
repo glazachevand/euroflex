@@ -1,7 +1,7 @@
 // burger
 import { menu_burger } from "./components/menu.js";
 menu_burger();
-menu_close();
+// menu_close();
 
 // убрать в бургер блок с телефоном на маленьких разрешениях экрана
 import { dynamic_adapt } from "./components/dynamic_adapt.js";
@@ -107,3 +107,8 @@ lightbox.option({
   positionFromTop: document.documentElement.clientHeight / 3,
   wrapAround: false,
 });
+
+// анимации при скоролле
+import AOS from "aos";
+AOS.init();
+console.log("AOS: ", AOS);

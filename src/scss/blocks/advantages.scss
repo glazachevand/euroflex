@@ -17,22 +17,20 @@
     @include adaptiv-value("margin-bottom", 82, 28, 1);
     @include adaptiv-value("margin-left", 10, 5, 1);
     @include adaptiv-value("margin-right", 10, 5, 1);
-    // transform: scale(0);
-    // opacity: 0.5;
-    // &._active {
-    //   transform: scale(1);
-    //   opacity: 1;
-    //   @for $var from 1 to 20 {
-    //     $delay: $var * 0.2;
-    //     &:nth-child(#{$var}) {
-    //       @if $var==1 {
-    //         transition: all 0.3s ease 0s;
-    //       } @else {
-    //         transition: all 0.3s ease #{$delay + s};
-    //       }
-    //     }
-    //   }
-    // }
+  }
+}
+[data-aos="zoom-in-order"] {
+  transform: scale(0);
+  opacity: 0.2;
+  &.aos-animate {
+    transform: scale(1);
+    opacity: 1;
+    @for $var from 1 to 20 {
+      $delay: $var * 0.3;
+      &:nth-child(#{$var}) {
+        transition: all 0.5s ease #{$delay + s};
+      }
+    }
   }
 }
 .advantages-item {
