@@ -1,6 +1,6 @@
 .first-screen {
   @include adaptiv-value("min-height", $firstScreenHeight, 500, 1);
-  background-image: url("../../img/first-screen.jpg");
+  background-image: url("../../images/first-screen.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,16 +43,6 @@
         width: auto;
         overflow: hidden;
         transition: max-height 0.8s ease 0s;
-      }
-    }
-  }
-  &__btn-order {
-    display: none;
-    @media (max-width: $md) {
-      display: inline-flex;
-      margin-bottom: 15px;
-      &._active {
-        display: none;
       }
     }
   }

@@ -1,3 +1,4 @@
-//import "./vendors";
 //import "./_functions";
-import "./components";
+import "./_vendors";
+//import './_functions';
+import "./_components";

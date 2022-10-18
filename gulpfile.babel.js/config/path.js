@@ -24,9 +24,9 @@ export default {
     dest: pathDest + "/js",
   },
   img: {
-    src: pathSrc + "/img/**/*.{png,jpg,jpeg,gif,svg}",
-    watch: pathSrc + "/img/**/*.{png,jpg,jpeg,gif,svg}",
-    dest: pathDest + "/img",
+    src: pathSrc + "/images/**/*.{png,jpg,jpeg,gif,svg}",
+    watch: pathSrc + "/images/**/*.{png,jpg,jpeg,gif,svg}",
+    dest: pathDest + "/images",
   },
   fonts: {
     src: pathSrc + "/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
