@@ -1,10 +1,11 @@
-export function dynamic_adapt() {
-  adapt();
+export function init() {
+  dynamic_adapt();
+
   window.addEventListener("resize", function (event) {
-    adapt();
+    dynamic_adapt();
   });
 
-  function adapt() {
+  function dynamic_adapt() {
     let dataMove = document.querySelector("[data-move]");
     if (dataMove) {
       let dataMoveWidth = dataMove.getAttribute("data-move");

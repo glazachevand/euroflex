@@ -4,7 +4,7 @@ menu_burger();
 // menu_close();
 
 // убрать в бургер блок с телефоном на маленьких разрешениях экрана
-import { dynamic_adapt } from "./components/dynamic_adapt.js";
+import { init as dynamic_adapt } from "./components/dynamic_adapt.js";
 dynamic_adapt();
 
 // sliders
@@ -94,11 +94,6 @@ const productionSwiper = new Swiper(".production-slider", {
 
 // галерея (в слайдере)
 import lightbox from "../../node_modules/lightbox2/dist/js/lightbox-plus-jquery.min";
-console.log("lightbox: ", lightbox);
-console.log(
-  "document.documentElement.clientHeight: ",
-  document.documentElement.clientHeight
-);
 lightbox.option({
   alwaysShowNavOnTouchDevices: true,
   albumLabel: "рис. %1 из %2",
@@ -108,7 +103,33 @@ lightbox.option({
   wrapAround: false,
 });
 
-// анимации при скоролле
+// анимации при скролле
 import AOS from "aos";
 AOS.init();
-console.log("AOS: ", AOS);
+
+// анимация цифр
+import { CountUp } from "../../node_modules/countup.js/dist/countUp.min.js";
+const digits = document.querySelectorAll("._digit-anim");
+
+digits.forEach((digit) => {
+  digit.textContent = digit.textContent.replace(",", ".");
+  const decimalLength = digit.textContent.includes(".")
+    ? digit.textContent.split(".").pop().length
+    : 0;
+
+  const countUp = new CountUp(digit, digit.textContent, {
+    startVal: 0,
+    duration: 3,
+    decimalPlaces: decimalLength,
+    decimal: ",",
+    useEasing: false,
+    scrollSpyOnce: true,
+  });
+  if (!countUp.error) {
+    document.addEventListener("aos:in:digit", () => {
+      countUp.start();
+    });
+  } else {
+    console.error(countUp.error);
+  }
+});
