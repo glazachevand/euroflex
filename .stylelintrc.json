@@ -586,7 +586,7 @@
     "keyframe-declaration-no-important": true,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
-    "max-line-length": 120,
+    "max-line-length": 160,
     "max-nesting-depth": null,
     "media-feature-colon-space-after": "always",
     "media-feature-colon-space-before": "never",
@@ -738,8 +738,12 @@
     "scss/percent-placeholder-pattern": null,
     "scss/selector-no-redundant-nesting-selector": true
   },
-  "overrides": [{
-    "files": ["src/scss/*/**.scss"],
-    "customSyntax": "postcss-scss"
-  }]
+  "overrides": [
+    {
+      "files": [
+        "src/scss/*/**.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    }
+  ]
 }

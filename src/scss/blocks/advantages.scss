@@ -26,7 +26,7 @@
     transform: scale(1);
     opacity: 1;
     @for $var from 1 to 20 {
-      $delay: $var * 0.3;
+      $delay: $var * 0.2;
       &:nth-child(#{$var}) {
         transition: all 0.5s ease #{$delay + s};
       }

@@ -1,11 +1,9 @@
 export function init() {
-  dynamic_adapt();
+  hidePhone();
 
-  window.addEventListener("resize", function (event) {
-    dynamic_adapt();
-  });
+  window.addEventListener("resize", hidePhone);
 
-  function dynamic_adapt() {
+  function hidePhone() {
     let dataMove = document.querySelector("[data-move]");
     if (dataMove) {
       let dataMoveWidth = dataMove.getAttribute("data-move");

@@ -14,14 +14,7 @@
   &__content {
     margin: 0 -14.5px 22px;
     overflow: hidden;
-    transition: max-height 0.8s ease 0s;
-    &._hide {
-      overflow: hidden;
-      transition: max-height 0.8s ease 0s;
-    }
-    &:hover {
-      overflow: visible;
-    }
+    transition: all 0.4s linear 0s;
   }
   &__item {
     margin: 0 14.5px 40px;

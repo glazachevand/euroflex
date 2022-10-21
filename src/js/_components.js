@@ -1,11 +1,14 @@
 // burger
-import { menu_burger } from "./components/menu.js";
-menu_burger();
-// menu_close();
+import { init as menu } from "./components/menu.js";
+menu();
 
 // убрать в бургер блок с телефоном на маленьких разрешениях экрана
-import { init as dynamic_adapt } from "./components/dynamic_adapt.js";
-dynamic_adapt();
+import { init as hidePhone } from "./components/hide_phone.js";
+hidePhone();
+
+// клик по кнопке Скрыть решения
+import { init as hideSolutions } from "./components/solutions.js";
+hideSolutions();
 
 // sliders
 import Swiper, { Navigation, Autoplay, Thumbs } from "swiper";
