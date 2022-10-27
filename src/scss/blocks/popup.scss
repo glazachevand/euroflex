@@ -1,0 +1,19 @@
+.graph-modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  &__container {
+    padding: 50px;
+    width: auto;
+    max-width: 80%;
+    background-color: #e1c1c1;
+    box-shadow: 0px 10px 20px rgb(0 0 0 / 50%), 0px 10px 20px rgb(0 0 0 / 50%);
+  }
+  &__text {
+    @include adaptiv-value("font-size", 18, 14, 1);
+    font-weight: 500;
+  }
+  &__close {
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/close.svg") 0 0 no-repeat;
+  }
+}

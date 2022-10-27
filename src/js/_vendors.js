@@ -149,9 +149,16 @@ for (const digit of digits) {
 
 // формы
 import { validateForms } from "./components/validate_forms";
+// popup
+import GraphModal from "graph-modal";
 
 const afterForm = (message) => {
-  console.log("message:", message);
+  const modal = new GraphModal({
+    isOpen: (modal) => {
+      const text = document.querySelector(".graph-modal__text");
+      text.innerHTML = message;
+    },
+  }).open("first");
 };
 
 validateForms(".form-order", afterForm);

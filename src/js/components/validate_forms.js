@@ -75,36 +75,30 @@ export const validateForms = (selector, afterSend) => {
       e.preventDefault();
       form.classList.add("_sending");
 
-      const response = await fetch(formAction, {
-        method: "POST",
-        body: formData,
-      });
+      try {
+        const response = await fetch(formAction, {
+          method: "POST",
+          body: formData,
+        });
 
-      if (response.ok) {
-        let result = await response.json();
-        console.log("result: ", result);
-        form.classList.remove("_sending");
-        // if (popupText) {
-        //   popupText.textContent = result.message + ' Статус: ' + result.status;
-        // }
-        // popup_open(message);
-        message = result.message;
+        if (response.ok) {
+          const result = await response.json();
+          message = result.message + result.data;
 
-        e.target.reset();
+          e.target.reset();
 
-        for (const checkImput of checkImputs) {
-          checkImput.checked = false;
+          for (const checkImput of checkImputs) {
+            checkImput.checked = false;
+          }
+        } else {
+          message = result.message + response.status;
         }
-      } else {
-        // if (popupText) {
-        //   popupText.textContent = 'Ошибка при отправке данных: ' + response.status;
-        //   popup_open(message);
-        // }
-        message = result.message + response.status;
-        form.classList.remove("_sending");
+        afterSend(message);
+      } catch (error) {
+        message = "Ошибка: " + error;
       }
 
-      afterSend(message);
+      form.classList.remove("_sending");
     });
   }
 };

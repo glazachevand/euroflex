@@ -6,18 +6,18 @@ require 'phpmailer/Exception.php';
 
 //Тело письма
 $subject = 'проект euroflex';
-$body = '<h1>Проект euroflex</h1>';
+$body = '<p style="color: #52677c;">Проект euroflex</p></br><strong>Данные: </strong></br></br>';
 if (trim(!empty($_POST['user']))) {
-  $body .= '<p><strong>Имя: </strong> ' . $_POST['user'] . '</p>';
+  $body .= '<strong>Имя: </strong> ' . $_POST['user'] . '</br>';
 }
 if (trim(!empty($_POST['user_phone']))) {
-  $body .= '<p><strong>Телефон: </strong> ' . $_POST['user_phone'] . '</p>';
+  $body .= '<strong>Телефон: </strong> ' . $_POST['user_phone'] . '</br></br>';
 }
 if (!empty($_POST['check'])) {
   $checkItems = $_POST['check'];
-  $body .= '<p><strong>Выбор категорий: </strong>' . '</p>';
+  $body .= '<strong>Выбор категорий: </strong>' . '</br></br>';
   foreach ($checkItems as $checkItem) {
-    $body .= $checkItem . '<br>';
+    $body .= $checkItem . '</br>';
   }
 }
 
@@ -48,14 +48,14 @@ try {
 
   // Проверяем отправление сообщения
   if ($mail->send()) {
-    $message = "<p>Данные отправлены</p>";
+    $message = "<p>Ваши данные отправлены. Спасибо!</p></br>";
     $status = "ok";
   } else {
-    $message = "<p>Ошибка при отправлении данных. Сообщение не было отправлено.</p>";
-    $status = "{$mail->ErrorInfo}";
+    $message = "<p>Ошибка при отправлении данных. Сообщение не было отправлено.</p></br>";
+    $status = "<p>Причина ошибки: {$mail->ErrorInfo}</p>";
   }
 } catch (Exception $e) {
-  $message = "<p>Ошибка при отправлении данных</p>";
-  $status = "<p>Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}</p>";
+  $message = "<p>Ошибка при отправлении данных</p></br>";
+  $status = "<p>Причина ошибки: {$mail->ErrorInfo}</p>";
 }
-echo json_encode(["message" => $message, "status" => $status, "Ваши данные" => $body]);
+echo json_encode(["message" => $message, "status" => $status, "data" => $body]);
