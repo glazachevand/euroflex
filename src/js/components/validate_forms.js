@@ -60,6 +60,7 @@ export const validateForms = (selector, afterSend) => {
       const formAction = form.getAttribute("action")
         ? form.getAttribute("action").trim()
         : "#";
+      const btnSubmit = form.querySelector(".form-order__submit");
 
       let message;
 
@@ -73,7 +74,9 @@ export const validateForms = (selector, afterSend) => {
       }
 
       e.preventDefault();
-      form.classList.add("_sending");
+
+      btnSubmit.classList.add("_sending");
+      btnSubmit.innerHTML = '<div class="loader"> </div>';
 
       try {
         const response = await fetch(formAction, {
@@ -98,7 +101,8 @@ export const validateForms = (selector, afterSend) => {
       }
 
       afterSend(message);
-      form.classList.remove("_sending");
+      btnSubmit.classList.remove("_sending");
+      btnSubmit.innerHTML = "Получить СПЕЦПРЕДЛОЖЕНИЕ <span></span>";
     });
   }
 };
