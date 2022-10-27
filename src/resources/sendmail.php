@@ -6,18 +6,18 @@ require 'phpmailer/Exception.php';
 
 //Тело письма
 $subject = 'проект euroflex';
-$body = '<p style="color: #52677c;">Проект euroflex</p></br><strong>Данные: </strong></br></br>';
+$body = '<p style="color: #52677c;">Проект euroflex</p><br><p><strong>Данные: </strong></p></br>';
 if (trim(!empty($_POST['user']))) {
-  $body .= '<strong>Имя: </strong> ' . $_POST['user'] . '</br>';
+  $body .= '<strong>Имя: </strong> ' . $_POST['user'] . '</p>';
 }
 if (trim(!empty($_POST['user_phone']))) {
-  $body .= '<strong>Телефон: </strong> ' . $_POST['user_phone'] . '</br></br>';
+  $body .= '<p><strong>Телефон: </strong> ' . $_POST['user_phone'] . '</p></br>';
 }
 if (!empty($_POST['check'])) {
   $checkItems = $_POST['check'];
-  $body .= '<strong>Выбор категорий: </strong>' . '</br></br>';
+  $body .= '<p><strong>Выбор категорий: </strong>' . '</p>';
   foreach ($checkItems as $checkItem) {
-    $body .= $checkItem . '</br>';
+    $body .= '<p>' . $checkItem . '</p>';
   }
 }
 

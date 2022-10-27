@@ -91,13 +91,13 @@ export const validateForms = (selector, afterSend) => {
             checkImput.checked = false;
           }
         } else {
-          message = result.message + response.status;
+          message = `Сообщение не было отправлено. Ошибка: статус ${response.status} ${response.statusText}`;
         }
-        afterSend(message);
       } catch (error) {
-        message = "Ошибка: " + error;
+        message = "Сообщение не было отправлено. Ошибка: " + error;
       }
 
+      afterSend(message);
       form.classList.remove("_sending");
     });
   }
