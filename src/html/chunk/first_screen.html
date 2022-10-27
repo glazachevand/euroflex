@@ -2,12 +2,9 @@
   <div class="first-screen__container _container">
     <div class="first-screen__body">
       <h1 class="first-screen__title title">
-        <span class="color-change-2x">Еврофлекс</span> - ведущий производитель
-        упаковки для пищевой промышленности и сельского хозяйства
+        <span class="color-change-2x">Еврофлекс</span> - ведущий производитель упаковки для пищевой промышленности и сельского хозяйства
       </h1>
-      <div class="first-screen__subtitle">
-        Пленка БОПП с макроперфорацией до 12 отверстий
-      </div>
+      <div class="first-screen__subtitle"> Пленка БОПП с макроперфорацией до 12 отверстий </div>
       <div class="first-screen__promo promo">
         <div class="promo__promo-item">
           <div class="promo__img _icons-promo_1"></div>
@@ -23,58 +20,8 @@
         </div>
       </div>
     </div>
-    <section class="first-screen__order order">
-      <form
-        action="sendmail.php"
-        data-ajax="true"
-        class="form-order form"
-        id="form-order"
-        method="post"
-      >
-        <h2 class="form-order__title">
-          Получите расчет за 15 мин и спецпредложение на первый заказ!
-        </h2>
-        <div class="form-order__subtitle">
-          Количество спепредложений в рамках месяца ограничено
-        </div>
-        <div class="form-order__line-user">
-          <label for="user" class="form-order__label">Ваше имя*</label>
-          <input
-            type="text"
-            class="form-order__name form-order__input _req"
-            name="user"
-            id="user"
-            data-value="Петров Петр"
-            data-error="Заполните поле, пожалуйста"
-            autocomplete="off"
-          />
-        </div>
-        <div class="form-order__line-phone">
-          <label for="user-phone" class="form-order__label">Ваш номер*</label>
-          <input
-            type="tel"
-            class="form-order__user-phone form-order__input _phone _req"
-            name="user_phone"
-            id="user-phone"
-            data-value="+7 (___) ___-__-__"
-            data-error="Заполните поле правильно, пожалуйста"
-            autocomplete="off"
-          />
-        </div>
-        <input
-          type="submit"
-          class="form-order__submit btn btn_red"
-          value="Получить СПЕЦПРЕДЛОЖЕНИЕ"
-        />
-        <div
-          class="form-order__confidentiality form-order__confidentiality _icons-lock"
-        >
-          Мы гарантируем конфиденциальность данных
-        </div>
-      </form>
-    </section>
-    <div class="first-screen__btn-order btn-order btn btn_red">
-      Получить&nbsp;СПЕЦПРЕДЛОЖЕНИЕ
+    <section class="first-screen__order order"> @@include("form.html") </section>
+    <div class="first-screen__btn-order btn-order btn btn_red"> Получить&nbsp;СПЕЦПРЕДЛОЖЕНИЕ <span></span>
     </div>
   </div>
 </section>

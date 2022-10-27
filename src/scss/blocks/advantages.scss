@@ -19,16 +19,16 @@
     @include adaptiv-value("margin-right", 10, 5, 1);
   }
 }
-[data-aos="zoom-in-order"] {
-  transform: scale(0);
-  opacity: 0.2;
+[data-aos="advantages"] {
+  transform: scale(0.9);
+  opacity: 0.9;
   &.aos-animate {
     transform: scale(1);
     opacity: 1;
     @for $var from 1 to 20 {
       $delay: $var * 0.2;
       &:nth-child(#{$var}) {
-        transition: all 0.5s ease #{$delay + s};
+        transition: all 0.2s ease #{$delay + s};
       }
     }
   }

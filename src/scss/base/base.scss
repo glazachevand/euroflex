@@ -68,12 +68,99 @@ body {
   text-transform: uppercase;
   border-radius: 2px;
   cursor: pointer;
+  @media (max-width: $xl) {
+    line-height: 1.2;
+  }
+  &_phone {
+    background-color: $redColor;
+    color: #fff;
+    padding: 4px 16.5px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+    box-shadow: 0 0 0 0 rgba($redColor, 0.5);
+    animation: pulse 1.5s infinite;
+    &:hover {
+      animation: none;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(0.98);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba($redColor, 0);
+      }
+      100% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba($redColor, 0);
+      }
+    }
+  }
   &_red {
     background-color: $redColor;
     color: #fff;
+    position: relative;
     &:hover {
-      background-color: #d98181;
-      transition: background-color 0.5s ease 0s;
+      color: $redColor;
+      background: #f2f3f5;
+      box-shadow: none;
+      &:before,
+      &:after {
+        width: 50%;
+        transition: width 0.2s ease-in;
+      }
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      background: $redColor;
+      z-index: 2;
+      transition: width 0.2s 0.35s ease-out;
+    }
+    &:before {
+      right: 50%;
+    }
+    &:after {
+      left: 50%;
+    }
+    & span {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      &:hover:before,
+      &:hover:after {
+        width: 50%;
+        height: 100%;
+        opacity: 1;
+        transition: height 0s 0.2s ease-in, width 0.2s 0.2s linear, opacity 0s 0.2s;
+      }
+      &:before,
+      &:after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 0%;
+        bottom: 0;
+        border-top: 2px solid $redColor;
+        background: transparent;
+        opacity: 0;
+      }
+      &:before {
+        left: 0;
+        border-left: 2px solid $redColor;
+      }
+      &:after {
+        right: 0;
+        border-right: 2px solid $redColor;
+      }
     }
   }
   &_white {

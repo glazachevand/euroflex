@@ -1,3 +1,5 @@
+import AOS from "aos";
+
 export function init() {
   const hideBtnSolutions = document.querySelector(".solutions__hide-btn");
   const hideTextSolutions = document.querySelector(".solutions__hide-text");
@@ -13,6 +15,10 @@ export function init() {
 
       if (solutions.style.maxHeight !== "0px") {
         solutions.style.maxHeight = 0;
+        setTimeout(() => {
+          //AOS.refreshHard();
+        }, 10);
+
         if (rectSolutionsTop < headerHeight) {
           document
             .querySelector(".solutions")

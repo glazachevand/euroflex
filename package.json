@@ -59,6 +59,9 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "countup.js": "^2.3.2",
+    "graph-modal": "^1.0.6",
+    "inputmask": "^5.0.7",
+    "just-validate": "^3.8.1",
     "lightbox2": "^2.11.3",
     "swiper": "^8.4.4"
   }
