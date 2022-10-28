@@ -35,7 +35,7 @@ try {
   // Настройки почты
   $mail->Host       = 'smtp.yandex.ru';
   $mail->Username   = 'glaz-nad';
-  $mail->Password   = 'wfbadplrbnjnrhqs';
+  $mail->Password   = '******';
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
   $mail->setFrom('glaz-nad@yandex.ru', 'euroflex'); //отправитель письма
