@@ -20,11 +20,11 @@
   }
 }
 [data-aos="advantages"] {
-  transform: scale(0.9);
   opacity: 0.9;
+  transform: scale(0.9);
   &.aos-animate {
-    transform: scale(1);
     opacity: 1;
+    transform: scale(1);
     @for $var from 1 to 20 {
       $delay: $var * 0.2;
       &:nth-child(#{$var}) {
@@ -41,20 +41,20 @@
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    margin-bottom: 19.7px;
     width: 89px;
     height: 89px;
-    margin-bottom: 19.7px;
     overflow: hidden;
     &:before {
-      font-size: 89px;
       text-align: center;
+      font-size: 89px;
       color: #ff333380;
     }
   }
   &__text {
+    text-align: center;
     line-height: 23.44px;
     letter-spacing: 0.02em;
-    text-align: center;
     text-transform: uppercase;
     color: #2e3033;
   }

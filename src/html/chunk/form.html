@@ -1,15 +1,14 @@
-<form action="sendmail.php" data-ajax="true" class="form-order" method="post">
+<form action="sendmail.php" class="form-order" method="post">
   <h2 class="form-order__title"> Получите расчет за 15 мин и спецпредложение на первый заказ! </h2>
   <div class="form-order__subtitle"> Количество спепредложений в рамках месяца ограничено </div>
   <div class="form-order__line-user">
-    <label for="user" class="form-order__label">Ваше имя*</label>
-    <input type="text" class="form-order__name form-order__input" name="user" id="user" placeholder="Петров Петр" autocomplete="off" />
+    <label class="form-order__label">Ваше имя*<input type="text" class="form-order__input user" name="user" placeholder="Петров Петр" autocomplete="off" /></label>
   </div>
   <div class="form-order__line-phone">
-    <label for="user-phone" class="form-order__label">Ваш номер*</label>
-    <input type="tel" class="form-order__user-phone form-order__input" name="user_phone" placeholder="+7 (___) ___-__-__" id="user-phone" autocomplete="off" />
+    <label class="form-order__label">Ваш номер*<input type="tel" class="form-order__input user-phone" name="user_phone" placeholder="+7 (___) ___-__-__"
+        autocomplete="off" /></label>
   </div>
   <button type="submit" class="form-order__submit btn btn_red"> Получить СПЕЦПРЕДЛОЖЕНИЕ <span></span>
   </button>
-  <div class="form-order__confidentiality form-order__confidentiality"> Мы гарантируем конфиденциальность данных </div>
+  <div class="form-order__confidentiality"> Мы гарантируем конфиденциальность данных </div>
 </form>

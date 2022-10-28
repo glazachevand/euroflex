@@ -7,17 +7,17 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-height: 100%;
 }
 
 ._container {
-  max-width: $maxWidthContainer + px;
   @include adaptiv-value("padding-right", 30, 15, 1);
   @include adaptiv-value("padding-left", 30, 15, 1);
   margin: 0 auto;
+  max-width: $maxWidthContainer + px;
 }
 
 .main {
@@ -28,10 +28,10 @@ body {
   position: relative;
   img {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -42,65 +42,51 @@ body {
   color: #444444;
 }
 .title2 {
-  font-size: 32px;
-  @include adaptiv-value("font-size", 32, 20, 1);
-  font-weight: 500;
-  line-height: math.div(37.5px, 32px) * 100%;
   text-align: center;
+  @include adaptiv-value("font-size", 32, 20, 1);
+  line-height: math.div(37.5px, 32px) * 100%;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .title3 {
+  text-align: center;
   @include adaptiv-value("font-size", 18, 14, 1);
-  font-weight: 700;
   line-height: math.div(26.37px, 18px) * 100%;
   letter-spacing: 0.04em;
-  text-align: center;
-  text-transform: uppercase;
+  font-weight: 700;
   color: $mainColor;
+  text-transform: uppercase;
 }
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 2px;
+  @media (max-width: $xl) {
+    line-height: 1.2;
+  }
   @include adaptiv-value("font-size", 14, 12, 1);
   line-height: math.div(14px, 16.4px) * 100%;
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 2px;
   cursor: pointer;
-  @media (max-width: $xl) {
-    line-height: 1.2;
-  }
   &_phone {
-    background-color: $redColor;
-    color: #fff;
     padding: 4px 16.5px;
     font-weight: 400;
     line-height: 18px;
+    color: #fff;
     text-transform: none;
+    background-color: $redColor;
     box-shadow: 0 0 0 0 rgba($redColor, 0.5);
     animation: pulse 1.5s infinite;
     &:hover {
       animation: none;
     }
-    @keyframes pulse {
-      0% {
-        transform: scale(0.98);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba($redColor, 0);
-      }
-      100% {
-        transform: scale(0.98);
-        box-shadow: 0 0 0 0 rgba($redColor, 0);
-      }
-    }
   }
   &_red {
+    position: relative;
     background-color: $redColor;
     color: #fff;
-    position: relative;
     &:hover {
       color: $redColor;
       background: #f2f3f5;
@@ -119,8 +105,8 @@ body {
       height: 2px;
       bottom: 0;
       background: $redColor;
-      z-index: 2;
       transition: width 0.2s 0.35s ease-out;
+      z-index: 2;
     }
     &:before {
       right: 50%;
@@ -164,10 +150,10 @@ body {
     }
   }
   &_white {
-    background-color: #fff;
-    color: $redColor;
     border: 2px solid #ffaeae;
     border-radius: 4px;
+    color: $redColor;
+    background-color: #fff;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
     &:hover {
       background-color: #e0d8d8;
@@ -183,5 +169,18 @@ body {
     &._active {
       display: none;
     }
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.98);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba($redColor, 0);
+  }
+  100% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba($redColor, 0);
   }
 }

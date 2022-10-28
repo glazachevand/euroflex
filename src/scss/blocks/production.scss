@@ -27,8 +27,8 @@
     }
     &_red {
       font-weight: bold;
-      text-decoration: underline;
       color: $redColor;
+      text-decoration: underline;
     }
   }
   &__list {
@@ -73,8 +73,8 @@
   &__item-digit {
     margin-bottom: 10px;
     @include adaptiv-value("font-size", 28, 20, 1);
-    line-height: math.div(33px, 28px) * 100%;
     font-weight: bold;
+    line-height: math.div(33px, 28px) * 100%;
     letter-spacing: 0em;
     color: $redColor;
     & span {

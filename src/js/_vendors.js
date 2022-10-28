@@ -1,10 +1,10 @@
 // sliders
-import Swiper, { Navigation, Autoplay, Thumbs } from "swiper";
-Swiper.use([Navigation, Autoplay, Thumbs]);
+import Swiper, { Navigation, Autoplay, Thumbs, Pagination } from "swiper";
+Swiper.use([Navigation, Autoplay, Thumbs, Pagination]);
 
 // мини-слайдер с продуктами
 const productsMiniSwiper = new Swiper(".products-mini-slider", {
-  loop: true,
+  loop: false,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -84,7 +84,7 @@ const productionSwiper = new Swiper(".production-slider", {
 });
 
 // галерея (в слайдере)
-import lightbox from "../../node_modules/lightbox2/dist/js/lightbox-plus-jquery.min";
+import lightbox from "../../node_modules/lightbox2/dist/js/lightbox-plus-jquery.js";
 lightbox.option({
   alwaysShowNavOnTouchDevices: true,
   albumLabel: "рис. %1 из %2",
@@ -135,7 +135,6 @@ for (const digit of digits) {
     decimalPlaces: decimalLength,
     decimal: ",",
     useEasing: false,
-    //enableScrollSpy: true,
     scrollSpyOnce: true,
   });
   if (!countUp.error) {

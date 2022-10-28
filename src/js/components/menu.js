@@ -4,8 +4,8 @@ export function init() {
   menu_burger();
 
   function menu_burger() {
-    let iconMenu = document.querySelector(".icon-menu");
-    let menuBody = document.querySelector(".menu__body");
+    const iconMenu = document.querySelector(".icon-menu");
+    const menuBody = document.querySelector(".menu__body");
 
     iconMenu?.addEventListener("click", function (e) {
       iconMenu.classList.toggle("_active");
@@ -50,8 +50,8 @@ export function init() {
   function linkClickHandler(e) {
     e.preventDefault();
 
-    let iconMenu = document.querySelector(".icon-menu");
-    let menuBody = document.querySelector(".menu__body");
+    const iconMenu = document.querySelector(".icon-menu");
+    const menuBody = document.querySelector(".menu__body");
     iconMenu?.classList.remove("_active");
     menuBody?.classList.remove("_active");
 

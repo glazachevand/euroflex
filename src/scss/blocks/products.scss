@@ -1,13 +1,13 @@
 .products {
-  background-color: #fff;
   border-bottom: 5px dashed rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   &__container {
     @include adaptiv-value("padding-top", 108, 30, 1);
     @include adaptiv-value("padding-bottom", 104, 30, 1);
   }
   &__title {
-    color: #646566;
     @include adaptiv-value("margin-bottom", 80, 40, 1);
+    color: #646566;
   }
   &__mini-slider {
     @include adaptiv-value("margin-right", 200, 50, 1);
@@ -42,18 +42,18 @@
     }
   }
   &__img {
+    text-align: center;
+    margin: 0 auto 33px;
     height: 64px;
     width: 42px;
-    margin: 0 auto 33px;
-    text-align: center;
   }
   &__text {
     display: inline-block;
     margin: 0;
     font-size: 16px;
-    font-weight: 700;
     line-height: 23px;
     letter-spacing: 0.04em;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: underline;
     color: #939599;
@@ -76,8 +76,8 @@
     flex: 0 1 21.84%;
     text-align: center;
     @media (max-width: $md) {
-      max-width: 50%;
       margin-bottom: 20px;
+      max-width: 50%;
     }
     & img {
       border-radius: 50%;
@@ -91,8 +91,8 @@
     bottom: 71px;
     z-index: 10;
     &::before {
-      color: $pinkColor;
       font-size: 42px;
+      color: $pinkColor;
     }
     @media (max-width: $md) {
       top: 25%;
@@ -110,21 +110,21 @@
     text-align: center;
   }
   &__title {
-    @include adaptiv-value("margin-bottom", 35, 10, 1);
-    letter-spacing: 0.04em;
-    color: #939599;
     text-align: left;
-    text-transform: none;
     @media (max-width: $md) {
       text-align: center;
     }
+    @include adaptiv-value("margin-bottom", 35, 10, 1);
+    letter-spacing: 0.04em;
+    color: #939599;
+    text-transform: none;
   }
   &__text {
+    text-align: left;
     @include adaptiv-value("margin-bottom", 40, 10, 1);
     font-size: 14px;
     line-height: 18px;
     color: #626366;
-    text-align: left;
   }
   &__btn {
     padding: 12px 34.5px;

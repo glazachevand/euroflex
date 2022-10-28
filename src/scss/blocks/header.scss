@@ -13,7 +13,6 @@
     }
   }
   &__container {
-    transition: min-height 0.5s ease 0s;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,6 +22,7 @@
     @media (max-width: $md) {
       min-height: 5px;
     }
+    transition: min-height 0.5s ease 0s;
   }
   &__logo {
     position: relative;
@@ -40,15 +40,15 @@
       order: 1;
     }
     @media (min-width: $lg) {
-      display: block;
-      order: 0;
       flex: 0 1 606px;
+      order: 0;
+      display: block;
     }
   }
   &__phone-container {
     position: relative;
-    z-index: 5;
     display: inline-block;
+    z-index: 5;
     @media (min-width: $sm) {
       flex: 0 0 160px;
       margin: 0 10px;
@@ -63,8 +63,8 @@
     display: block;
     margin: 0 0 10px 0;
     font-size: 18px;
-    font-weight: 500;
     line-height: 21px;
+    font-weight: 500;
     color: #2e3033;
     &:hover,
     &:active {
@@ -81,15 +81,15 @@
   &__body {
     @media (max-width: $lg) {
       position: fixed;
-      width: 100%;
-      overflow: auto;
       top: -100vh;
       left: 0;
+      padding: 30px 15px;
+      width: 100%;
+      height: 100vh;
       background-color: #d9d7d7;
+      overflow: auto;
       opacity: 0;
       transition: all 0.5s ease 0s;
-      padding: 30px 15px;
-      height: 100vh;
       &._active {
         top: $headerHeight + px;
         opacity: 0.95;
@@ -110,24 +110,23 @@
     }
   }
   &__link {
+    position: relative;
     padding: 5px 3px;
     color: #222222;
     transition: color 0.4s ease 0s;
-    position: relative;
     @media (max-width: $lg) {
       @include adaptiv-value("font-size", 40, 28, 1);
     }
     &:after {
-      content: "";
       position: absolute;
-      bottom: 0;
       left: 0;
       right: 0;
+      bottom: 0;
+      content: "";
       width: 100%;
       height: 3px;
-      transform: scaleX(0);
       background-color: $redColor;
-
+      transform: scaleX(0);
       transition: transform 0.3s;
     }
     &:hover,
@@ -149,10 +148,10 @@
     cursor: pointer;
     z-index: 5;
     .inner {
-      width: 40px;
-      height: 40px;
       margin: 20px auto;
       position: relative;
+      width: 40px;
+      height: 40px;
       span {
         position: absolute;
         top: 0;

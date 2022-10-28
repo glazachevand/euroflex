@@ -4,11 +4,11 @@
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 3%;
     @include adaptiv-value("grid-row-gap", 50, 20, 1);
-    line-height: 23px;
-    text-decoration: underline;
     @media (max-width: $sm) {
       grid-template-columns: auto;
     }
+    line-height: 23px;
+    text-decoration: underline;
   }
   &__container {
     position: relative;
@@ -18,9 +18,9 @@
     user-select: none;
     & .form-check__input {
       position: absolute;
-      opacity: 0;
       height: 0;
       width: 0;
+      opacity: 0;
       cursor: pointer;
     }
     &:hover .form-check__input ~ .form-check__checkmark {
@@ -46,17 +46,17 @@
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
     height: 18px;
     width: 18px;
-    background: #ffffff;
     border: 1px solid #ffaeae;
-    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
+    background: #ffffff;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
     &:after {
-      content: "";
       position: absolute;
       display: none;
+      content: "";
     }
   }
 }

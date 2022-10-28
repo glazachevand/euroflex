@@ -9,7 +9,7 @@ export const validateForms = (selector, afterSend) => {
 
     const rules = [
       {
-        ruleSelector: "#user",
+        ruleSelector: ".user",
         rules: [
           {
             rule: "minLength",
@@ -23,7 +23,7 @@ export const validateForms = (selector, afterSend) => {
         ],
       },
       {
-        ruleSelector: "#user-phone",
+        ruleSelector: ".user-phone",
         tel: true,
         telError: "Введите корректный телефон",
         rules: [

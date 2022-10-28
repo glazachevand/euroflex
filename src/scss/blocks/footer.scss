@@ -5,14 +5,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
   &__text {
     margin-bottom: 10px;
     max-width: calc(780 / 1180 * 100%);
     font-size: 12px;
     line-height: 15px;
     color: $grayColor;
-
     @media (max-width: $lg) {
       max-width: 100%;
     }
