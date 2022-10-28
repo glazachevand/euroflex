@@ -758,7 +758,7 @@ body {
 
 .first-screen {
   min-height: 608px;
-  background-image: url("../../images/first-screen.jpg");
+  background-image: url("../images/first-screen.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1765,7 +1765,7 @@ body {
   }
 
   .first-screen {
-    background-image: url("../../images/first-screen.webp");
+    background-image: url("../images/first-screen.webp");
   }
 
   .footer {
