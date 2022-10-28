@@ -2,10 +2,13 @@
   "name": "euroflex",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/glazachevand/euroflex",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp --production"
+    "build": "gulp --production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 3 versions"
@@ -59,6 +62,7 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "countup.js": "^2.3.2",
+    "gh-pages": "^4.0.0",
     "graph-modal": "^1.0.6",
     "inputmask": "^5.0.7",
     "just-validate": "^3.8.1",
