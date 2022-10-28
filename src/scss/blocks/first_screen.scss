@@ -1,6 +1,6 @@
 .first-screen {
   @include adaptiv-value("min-height", $firstScreenHeight, 500, 1);
-  background-image: url("../../images/first-screen.jpg");
+  background-image: url("../images/first-screen.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
