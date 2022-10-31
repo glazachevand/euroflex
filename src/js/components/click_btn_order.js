@@ -12,16 +12,26 @@ export function init() {
         order.style.maxHeight = order.scrollHeight + 20 + "px";
       }
 
-      window.addEventListener("resize", resizeOrder);
+      window.addEventListener("resize", resizeThrottler, false);
+
+      var resizeTimeout;
+      function resizeThrottler() {
+        // ignore resize events as long as an actualResizeHandler execution is in the queue
+        if (!resizeTimeout) {
+          resizeTimeout = setTimeout(function () {
+            resizeTimeout = null;
+            resizeOrder();
+          }, 100);
+        }
+      }
 
       function resizeOrder() {
         if (
           btnOrder.classList.contains("_active") &&
           order.classList.contains("_active")
         ) {
-          btnOrder.classList.remove("_active");
-          order.classList.remove("_active");
-          order.style.maxHeight = null;
+          const order = btnOrder.previousElementSibling;
+          order.style.maxHeight = order.scrollHeight + 20 + "px";
         }
       }
     }
