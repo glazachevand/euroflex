@@ -456,6 +456,19 @@ body {
 
 .btn-order {
   display: none;
+  padding: 15px 20px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.order {
+  max-width: 430px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
 }
 
 @-webkit-keyframes pulse {
@@ -866,14 +879,6 @@ body {
   text-transform: uppercase;
 }
 
-.order {
-  max-width: 430px;
-  border-radius: 2px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
-}
-
 @-webkit-keyframes color-change-2x {
   0% {
     color: #52677c;
@@ -1141,14 +1146,6 @@ body {
     -webkit-box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
     box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
   }
-}
-
-.btn-order {
-  padding: 15px 20px;
-  -ms-flex-item-align: center;
-  align-self: center;
-  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
 }
 
 .header {
