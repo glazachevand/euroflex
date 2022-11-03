@@ -18,10 +18,6 @@
   }
   &__item {
     margin: 0 14.5px 40px;
-    &:hover {
-      transform: scale(1.2);
-      transition: transform 0.5s ease 0.9s;
-    }
   }
   &__hide-text {
     text-align: center;
